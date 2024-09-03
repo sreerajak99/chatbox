@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class AppTextfield extends StatelessWidget {
   const AppTextfield(
-      {super.key, required this.hinTText, required this.controllerName});
+      {super.key, required this.hinTText, required this.controllerName,this.iconname});
 
   final String hinTText;
   final TextEditingController controllerName;
-
+final Icon? iconname;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controllerName,
-      decoration: InputDecoration(
+      decoration: InputDecoration(suffixIcon: iconname,
           enabledBorder: OutlineInputBorder(
               borderSide:
                   BorderSide(color: Theme.of(context).colorScheme.tertiary)),
